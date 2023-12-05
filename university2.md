@@ -14,11 +14,9 @@ GROUP BY `office_address`;
 ```
 3. Calcolare la media dei voti di ogni appello d'esame
 ```
-SELECT AVG(`vote`), `date` as 'day_of_exam' 
-FROM `exams`
-INNER JOIN exam_student
-ON `exams`.`id` = `exam_student`.`exam_id`
-GROUP BY `date`;
+SELECT AVG(`vote`) 
+FROM `exam_student`
+GROUP BY `exam_id`;
 ```
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 ```
