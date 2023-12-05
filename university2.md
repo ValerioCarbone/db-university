@@ -22,4 +22,9 @@ GROUP BY `date`;
 ```
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 ```
+SELECT COUNT(*), `departments`.`name` AS 'name_of_department'
+FROM degrees
+INNER JOIN departments
+ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `name_of_department`;
 ```
