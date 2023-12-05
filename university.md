@@ -17,7 +17,7 @@ WHERE `cfu` > 10;
 ```
 SELECT * 
 FROM `students`
-WHERE DATEDIFF(NOW(), `date_of_birth`) > 365 * 30;
+WHERE DATEDIFF(NOW(), `date_of_birth`) >= 365 * 31;  
 
 ```
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
