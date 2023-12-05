@@ -1,4 +1,4 @@
-GROUP BY
+# GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno
 ```
@@ -29,7 +29,7 @@ ON `departments`.`id` = `degrees`.`department_id`
 GROUP BY `name_of_department`;
 ```
 
-JOIN
+# JOIN
 
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 ```
@@ -50,6 +50,13 @@ WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
 AND `degrees`.`level` = 'magistrale';
 ```
 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+```
+SELECT * 
+FROM `courses`
+JOIN course_teacher
+ON `courses`.`id` = `course_teacher`.`course_id`
+WHERE `course_teacher`.`teacher_id` = 44;
+```
 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
 sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
 nome
